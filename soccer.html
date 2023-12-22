@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Soccer</title>
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lobster', sans-serif;
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .image {
+            
+            position: relative;
+            animation: run 10s ease infinite;
+        }
+
+
+        .transformed-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }   
+        
+        .image:hover .transformed-image {
+            opacity: 1;
+            transform: scale(1.5)
+        }
+
+
+        @keyframes run {
+            0%   {
+                border:4px solid red; /*right:-400px; top:20px;*/
+            }
+            25%  {
+                border:4px solid yellow; /*right:400px; top:20px;*/
+            }
+            50%  {
+                border:4px solid blue; /*right:400px; top:-370px;*/
+            }
+            75%  {
+                border:4px solid green; /*right:-400px; top:-370px;*/
+            }
+            100% {
+                border:4px solid red; /*right:-400px; top:20px;*/
+            }
+        }
+
+
+        @keyframes color {
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+
+        button {
+        padding: 1rem 4rem;
+        font-size: 1rem;
+        border: none;
+        color: white;
+        background: red;
+        cursor: pointer;
+        border-radius: 50px;
+        }
+
+        button:hover {
+        background: #fff;
+        color: #000;
+        }
+
+        .boxes:hover {
+            opacity: 1;
+            transform: scale(1.20);
+            transition: 0.3s ease-in-out;
+            background-color: rgb(49, 49, 157);
+            color:white;
+            text-decoration: underline;
+            border: 5px solid white;
+           
+        }
+
+        .boxwords { 
+            position: relative;
+            padding-top: 40px;
+            font-size: 25px;
+            font-weight: 1000;
+            user-select: none;
+        }
+
+        .imagelogos {
+            position: absolute;
+            height: 75px;
+            width: 75px;
+            margin-bottom: 100px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+
+        .textone {
+            position: relative;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-size: 40px;
+          
+        }
+
+        .texttwo {
+            position: relative;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-size: 20px;
+          
+        }
+
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(45deg,rgb(39, 37, 37),gray);
+            background-size: 150% 150%;
+            animation: color 12s ease-in-out infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .background {
+            border-radius:0px;
+            background-color: rgb(243, 240, 240);
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 75vh; 
+            width: 100%;
+            margin-top: 150px;
+            
+        }
+
+        .boxes {
+            border-radius:25px;
+            background-color: white;
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 30vh; 
+            width: 27%;   
+            border: 5px solid black;
+            
+        }
+
+        .change-txt {
+            margin-left: 15px;
+            height: 90px;
+            line-height: 90px;
+            overflow: hidden;
+        }
+
+        .change-txt li {
+            
+            list-style: none;
+            font-variant: small-caps;
+            font-size: 60px;
+            font-weight: 500;
+            position: relative;
+            top: 0;
+            animation:slide 12s steps(4) infinite;
+        }
+
+        @keyframes slide {
+            100% {
+                top: -360px;
+            }
+        }
+
+        .change-txt li span {
+            position: relative;
+            margin: 5px 0;
+            line-height: 90px;
+        }
+
+        .change-txt li span::after{
+            content:'';
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: white;
+            animation: typing 3s steps(10) infinite;
+        }
+
+        @keyframes typing {
+            40%,
+            60% {
+                left: calc(100% + 30px);
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        .back {
+            border-radius:25px;
+            background-color: white;
+            margin-left: 500px; 
+            margin-top:-200px;
+            padding-left: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 200px; 
+            width: 500px;
+        }
+
+        .multicolor-text {
+            text-align: center;
+            background: linear-gradient(to left,
+                    gray,
+                    black,
+                    rgb(6, 6, 75),
+                    rgb(150, 100, 100));
+                    /*violet,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red*/
+            background-clip:text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    
+   <div class = "container">
+        <div class = "textone" style = "top: 140px; right: 380px;">Soccer Begins Here</div>
+        <div class = "texttwo" style = "top: 180px; right: 320px;">Click learn more for information on the rules of soccer<br> and the types including domestic, international, and<br> more.</div>
+        <button onclick = "window.location.href = 'https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fr3lcc7gf64791.png%3Fwidth%3D540%26format%3Dpng%26auto%3Dwebp%26s%3D9d32ec46f884486fd59dfd01453bf5d07bf30d75'" target ="_blank" style = "margin-right:700px;margin-top: 210px;">Learn More</button>
+        <div class = "back" style = "border:5px solid black;">
+            <ul class ="change-txt">
+                <li><span class = "multicolor-text" style="font-family:'Vina Sans'">Emotion.</span></li>
+                <li><span class = "multicolor-text" style="font-family:'Vina Sans'">Success.</span></li>
+                <li><span class = "multicolor-text" style="font-family:'Vina Sans'">Wonder.</span></li>
+                <li><span class = "multicolor-text" style="font-family:'Vina Sans'">Soccer.</span></li>
+            </ul>
+        </div>
+            <section class = "background">
+                <a class = "boxes" href = "club.html" style = "margin-bottom: 20px; margin-right: 100px; margin-left:100px">
+                    <img src = "barca.png" class = "imagelogos">
+                    <span class="boxwords"><b>Club Soccer</b></span>
+                 <!--<div style="margin-top:100px; margin-right:100px"><h3>Club Soccer</h3></div>-->  
+                 <!--onclick = "window.location.href = 'https://en.wikipedia.org/wiki/Football_club_(association_football)'"--> 
+                </a>
+                <a class = "boxes" href = "international.html" style = "margin-bottom: 20px; margin-right: 100px">
+                    <img src = "afa.png" class = "imagelogos">
+                    <span class="boxwords"><b>International Soccer</b></span>
+                    <!--<div style="margin-top:100px; margin-right:100px"><h3>International Soccer</h3></div>--> 
+                    <!--onclick = "window.location.href = 'https://en.wikipedia.org/wiki/Association_football#International_competitions'"-->
+                </a>
+                <a class = "boxes" href = "rules.html" style = "margin-bottom: 20px; margin-right: 100px">
+                    <img src = "bol.png" class = "imagelogos">
+                    <span class="boxwords"><b>Rules Of Soccer</b></span>
+                     <!--<div style="margin-top:100px; margin-right:100px"><h3>Rules of Soccer</h3></div>--> 
+                    <!--onclick = "window.location.href = 'https://en.wikipedia.org/wiki/Association_football#Laws'"-->
+                </a>
+            </section>
+        </div>
+</body>
+</html>
