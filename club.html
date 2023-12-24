@@ -12,6 +12,43 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 5px;
 }
+
+.dropdown{
+    display: inline-block;
+}
+.dropdown button{
+    background-color: hsl(0, 0%, 60%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 10px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    margin-left: -170px;
+}
+.dropdown:hover .content{
+    display: block;
+    
+}
+.dropdown:hover button{
+    background-color: hsl(0, 0%, 70%);
+    background-color: blue;
+}
+.dropdown a:hover{
+    background-color: rgb(61, 53, 53);
+    color: white;
+}
 </style>
 </head>
 <body>
@@ -19,12 +56,22 @@ h1, h2, h3, h4, h5, h6 {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Club Soccer</a>
+    <a href="soccer.html" class="w3-bar-item w3-button">Everything Soccer</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#menu" class="w3-bar-item w3-button">Leagues</a>
-      <a href="#contact" class="w3-bar-item w3-button">Teams</a>
+      <a href="#leagues" class="w3-bar-item w3-button">Leagues</a>
+      <a href="#teams" class="w3-bar-item w3-button">Teams</a>
+      <a href="#players" class="w3-bar-item w3-button">Players</a>
+      <div class="dropdown">
+        <button style = "margin-left: 10px;">| | |</button>
+        <div class="content">
+            <a href= "club.html">Club Soccer</a>
+            <a href= "international.html">International Soccer</a>
+            <a href="rules.html">Rules of Soccer</a>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
@@ -38,5 +85,65 @@ h1, h2, h3, h4, h5, h6 {
 </header>
 
 
+<!--new-->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- about-->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="guut.jpg" class="w3-round w3-image " alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 style = "text-decoration: underline;">About Club Soccer</h1>
+      <p class="w3-large">Club soccer refers to the professional and organized structure of soccer teams that compete at various levels within leagues and tournaments worldwide. These clubs are independent entities, often representing cities or regions, and are comprised of players contracted to play for them.
+
+        Club soccer operates on a tiered system, with teams competing in domestic leagues (such as the English Premier League, La Liga in Spain, Serie A in Italy, etc.) based on their performance and promotion/relegation systems. Additionally, clubs may participate in continental competitions like the UEFA Champions League in Europe or Copa Libertadores in South America, where top teams from various leagues compete for international glory.
+        
+        Each club has its own management, coaching staff, and infrastructure, and they often sign players from diverse backgrounds, forming multicultural and multilingual teams. </p>
+      
+    </div>
+  </div>
+  
+  <!--leagues-->
+  <div class="w3-row w3-padding-64" id="leagues">
+    <div class="w3-col m6 w3-padding-large">
+      <h1 style = "text-decoration: underline;">Domestic Leagues</h1>
+      <p class="w3-large">In club soccer, leagues feature a collection of teams that compete against each other over a season to determine the national champion. Leagues typically consist of 18 to 20 teams, varying by country, where each team plays a set number of matches against every other team in the league, both home and away. There are many leagues out there, but the top 5 most notorious and hardest leagues are the Premier League in England, La Liga in Spain, Bundesliga in Germany, Serie A in Italy, and Ligue 1 in France.
+        Points are awarded for wins (3 points), draws (1 point), and losses (0 points). The team with the most points at the end of the season is crowned the league champion. Points are crucial, as they determine standings and, in some leagues, also influence relegation and promotion. The bottom-placed teams at the end of the season are relegated to a lower division, while the top-performing teams from the lower division are promoted to replace them in the following season.</p>
+    </div>
+    
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="top.jpg" class="w3-round w3-image " alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+
+  <!--teams-->
+  <div class="w3-row w3-padding-64" id="teams">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="teams.jpg" class="w3-round w3-image " alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 style = "text-decoration: underline;">Club Soccer Teams</h1>
+      <p class="w3-large">A soccer club consists of teams of players who come together to compete in the sport of soccer, also known as football in many parts of the world. Typically, a team consists of players with various positions such as forwards, midfielders, defenders, and a goalkeeper. They work together to score goals while preventing the opposing team from scoring. Teams often represent cities, regions, or countries in various leagues, tournaments, and competitions. The teamwork, strategy, and coordination among players are essential for success on the field. These clubs can vary in size, structure, and level of competition. They often have youth academies, amateur teams, and professional teams that compete in different leagues and tournaments. From top left to bottom right are some prominent teams: Barcelona, Bayern Munich, Manchester City, Real Madrid, Inter Milan, and PSG.</p>
+    </div>
+  </div>
+
+  <!--players-->
+  <div class="w3-row w3-padding-64" id="players">
+    <div class="w3-col m6 w3-padding-large">
+      <h1 style = "text-decoration: underline;">Soccer Players</h1>
+      <p class="w3-large">In club soccer, leagues feature a collection of teams that compete against each other over a season to determine the national champion. Leagues typically consist of 18 to 20 teams, varying by country, where each team plays a set number of matches against every other team in the league, both home and away. There are many leagues out there, but the top 5 most notorious and hardest leagues are the Premier League in England, La Liga in Spain, Bundesliga in Germany, Serie A in Italy, and Ligue 1 in France.
+        Points are awarded for wins (3 points), draws (1 point), and losses (0 points). The team with the most points at the end of the season is crowned the league champion. Points are crucial, as they determine standings and, in some leagues, also influence relegation and promotion. The bottom-placed teams at the end of the season are relegated to a lower division, while the top-performing teams from the lower division are promoted to replace them in the following season.</p>
+    </div>
+    
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="top.jpg" class="w3-round w3-image " alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+  
+</div>
+  
 </body>
 </html>
